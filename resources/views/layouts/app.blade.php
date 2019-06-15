@@ -37,11 +37,14 @@
                 <li class="nav-item @if(Route::currentRouteName() === "fee-payment") active @endif">
                     <a class="nav-link" href="{{ url('fee-payment') }}">Fee Payment</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Payment Records</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"></a>
+                <li class="nav-item dropdown @if(Route::currentRouteName() === "search-student-logs") active @endif">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Payment Records
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ url('search-student-logs') }}">Search Student Logs</a>
+                        <a class="dropdown-item" href="#">All Students' Logs</a>
+                    </div>
                 </li>
             </ul>
         </div>

@@ -11,6 +11,7 @@ import {Formik} from 'formik';
 import * as Yup from 'yup';
 import PostRegistrationModal from './PostRegistrationModal'
 import '../css/datepicker-container.css';
+import {postData} from './../../rest/Ajax';
 
 const initialValues = {
     firstname: '',
@@ -52,9 +53,9 @@ export default class StudentRegistration extends Component{
             <div>
                 <Formik
                     initialValues={initialValues}
-                    onSubmit={(values, {action, resetForm}) => {
+                    onSubmit={(values, {setErrors, resetForm}) => {
                         console.log(values);
-                        postRegistrationData(values)
+                        postData(APP_URL + "/student", values)
                             .done((data, textStatus) => {
                                 this.setState({
                                     newStudent: {
@@ -68,7 +69,7 @@ export default class StudentRegistration extends Component{
                             })
                             .fail((jqXHR, textStatus, errorThrown) => {
                                 if (jqXHR.status === UNPROCESSABLE_ENTITY) {
-                                    action.setErrors(jqXHR.responseJSON.errors)
+                                    setErrors(jqXHR.responseJSON.errors)
                                 }
                             })
                     }}
@@ -184,13 +185,4 @@ const ErrorFeedback = styled.div`
     color: #e3342f;
 `;
 
-function postRegistrationData(data) {
-    return $.ajax(APP_URL + "/student", {
-        method: 'post',
-        data: data,
-        dataType: 'json',
-        headers: {
-            'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
-        }
-    });
-}
+

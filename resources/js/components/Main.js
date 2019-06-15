@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import styled from 'styled-components';
 import Home from './Home';
 import StudentRegistration from './registration/StudentRegistration';
+import FeesPaymentPage from './fee-payment/FeesPaymentPage';
+import SearchStudentLogsPage from "./search-student-logs/SearchStudentLogsPage";
 
 export default class Main extends Component {
     render() {
@@ -26,5 +28,8 @@ if (document.getElementById('homepage')) {
 } else if(document.getElementById('student-registration')) {
     ReactDOM.render(<StudentRegistration />, document.getElementById('student-registration'));
 } else if(document.getElementById('fee-payment')) {
-    // ReactDOM.render(<)
+    const page = <FeesPaymentPage/>;
+    ReactDOM.render(page, document.getElementById('fee-payment'));
+} else if(document.getElementById('search-student-logs')) {
+    ReactDOM.render(<SearchStudentLogsPage/>, document.getElementById('search-student-logs'));
 }
