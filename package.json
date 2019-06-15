@@ -34,6 +34,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
     "formik": "^1.5.7",
     "react-bootstrap": "^1.0.0-beta.9",
     "react-button-loaders": "0.0.1",

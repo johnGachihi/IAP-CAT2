@@ -34,8 +34,8 @@
                         Student Registration
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Fee Payment</a>
+                <li class="nav-item @if(Route::currentRouteName() === "fee-payment") active @endif">
+                    <a class="nav-link" href="{{ url('fee-payment') }}">Fee Payment</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Payment Records</a>

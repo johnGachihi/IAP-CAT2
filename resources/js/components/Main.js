@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
 import Home from './Home';
-import StudentRegistration from './StudentRegistration';
+import StudentRegistration from './registration/StudentRegistration';
 
 export default class Main extends Component {
     render() {
@@ -25,4 +25,6 @@ if (document.getElementById('homepage')) {
     ReactDOM.render(<Home />, document.getElementById('homepage'));
 } else if(document.getElementById('student-registration')) {
     ReactDOM.render(<StudentRegistration />, document.getElementById('student-registration'));
+} else if(document.getElementById('fee-payment')) {
+    // ReactDOM.render(<)
 }
