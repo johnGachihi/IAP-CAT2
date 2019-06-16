@@ -42,9 +42,7 @@ export default class SearchStudentLogsPage extends React.Component {
                 />
                 <TableContainer>
                     <div>
-                        {
-                            'Name: ' + (this.state.results.student.firstname || '') + ' ' + (this.state.results.student.lastname || '')
-                        }
+                        {'Student Name: ' + (this.state.results.student.firstname || '') + ' ' + (this.state.results.student.lastname || '')}
                     </div>
                     <ResultsTable results={this.state.results.feeTransactions}>
                     </ResultsTable>

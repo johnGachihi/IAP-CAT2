@@ -5,6 +5,7 @@ import Form from "react-bootstrap/Form";
 import Button from 'react-bootstrap/Button';
 import Col from "react-bootstrap/Col";
 import {getData} from "../../rest/Ajax";
+import * as Yup from "yup";
 
 const UNPROCESSABLE_ENTITY = 422;
 
@@ -16,6 +17,7 @@ export default class SearchForm extends React.Component {
                     initialValues={{
                         studentID: ''
                     }}
+                    validationSchema={SearchFormValidationSchema}
                     onSubmit={(values, {setErrors}) => {
                         this.props.onSearch();
                         getData(APP_URL + `/fee/${values.studentID}`, {})
@@ -58,3 +60,10 @@ export default class SearchForm extends React.Component {
         );
     }
 }
+
+const SearchFormValidationSchema = Yup.object().shape({
+    studentID: Yup.number("Student ID Number must be a number")
+        .typeError("Value must be a number")
+        .required("Student ID Number required")
+        .positive("Invalid Student ID Number")
+});

@@ -5,6 +5,7 @@ import Home from './Home';
 import StudentRegistration from './registration/StudentRegistration';
 import FeesPaymentPage from './fee-payment/FeesPaymentPage';
 import SearchStudentLogsPage from "./search-student-logs/SearchStudentLogsPage";
+import StudentsTotalFeesPage from "./students-total-fees/StudentsTotalFeesPage";
 
 export default class Main extends Component {
     render() {
@@ -32,4 +33,6 @@ if (document.getElementById('homepage')) {
     ReactDOM.render(page, document.getElementById('fee-payment'));
 } else if(document.getElementById('search-student-logs')) {
     ReactDOM.render(<SearchStudentLogsPage/>, document.getElementById('search-student-logs'));
+} else if(document.getElementById('students-total-fees')) {
+    ReactDOM.render(<StudentsTotalFeesPage/>, document.getElementById('students-total-fees'));
 }

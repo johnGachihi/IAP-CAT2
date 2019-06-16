@@ -117,7 +117,7 @@ export default class StudentRegistration extends Component{
                                             placeholderText={"MM/DD/YYYY"}
                                             name={"dateOfBirth"}
                                             className={`form-control ${props.errors.dateOfBirth && props.touched.dateOfBirth && 'is-invalid'}`}
-                                            selected={props.values.dateOfBirth }
+                                            selected={props.values.dateOfBirth}
                                             onChange={val => {
                                                 console.log("Date time changed", val);
                                                 props.setFieldValue('dateOfBirth', val.getTime());

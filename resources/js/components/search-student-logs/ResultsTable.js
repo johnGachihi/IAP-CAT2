@@ -24,7 +24,7 @@ export default class ResultsTable extends React.Component {
             <Table striped bordered hover>
                 <thead>
                     <tr>
-                        <th>Date</th>
+                        <th>Date of Payment</th>
                         <th>Amount</th>
                     </tr>
                 </thead>

@@ -29,4 +29,13 @@ class StudentsController extends Controller
 
         return $student;
     }
+
+    public function view() {
+        $records = Student::all()->transform(function ($student, $key) {
+            $student['fees_total'] = $student->fees()->get()->pluck('amount')->sum();
+            return $student;
+        });
+
+        return view('students-total-fees', ['records' => $records]);
+    }
 }
