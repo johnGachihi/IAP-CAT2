@@ -15,14 +15,14 @@
     "bootstrap": "^4.3.1",
     "cross-env": "^5.1",
     "jquery": "^3.2",
-    "laravel-mix": "^4.0.7",
-    "lodash": "^4.17.5",
+    "laravel-mix": "^4.1.2",
+    "lodash": "^4.17.15",
     "popper.js": "^1.12",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
     "resolve-url-loader": "^2.3.1",
-    "sass": "^1.15.2",
-    "sass-loader": "^7.1.0"
+    "sass": "^1.22.9",
+    "sass-loader": "^7.2.0"
   },
   "name": "101892",
   "version": "1.0.0",
@@ -34,14 +34,14 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.4.4",
-    "formik": "^1.5.7",
-    "react-bootstrap": "^1.0.0-beta.9",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "formik": "^1.5.8",
+    "react-bootstrap": "^1.0.0-beta.11",
     "react-button-loaders": "0.0.1",
-    "react-datepicker": "^2.7.0",
+    "react-datepicker": "^2.8.0",
     "react-pose": "^4.0.8",
     "react-router-dom": "^5.0.1",
-    "styled-components": "^4.3.1",
+    "styled-components": "^4.3.2",
     "yup": "^0.27.0"
   }
 }
