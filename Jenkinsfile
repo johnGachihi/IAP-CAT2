@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'php artisan serve'
+                sh 'echo "Hello World"'
             }
         }
     }
