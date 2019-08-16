@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'ble composer install asdfasfd asdfsa'
+                sh 'kjh ble composer install asdfasfd asdfsa'
             }
         }
     }
