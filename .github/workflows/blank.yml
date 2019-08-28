@@ -15,9 +15,6 @@ jobs:
       run: npm install
     - name: Install composer dependencies
       run: composer install
-    - name: Ble
-      run: php artisan list
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+    - name: Generate Laravel key
+      run: php artisan key:generate
+    
