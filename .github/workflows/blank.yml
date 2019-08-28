@@ -13,7 +13,9 @@ jobs:
       run: echo Hello, world!
     - name: Install npm dependencies
       run: npm install
-    - name: Check PHP version
+    - name: Install composer dependencies
+      run: composer install
+    - name: Ble
       run: php artisan list
     - name: Run a multi-line script
       run: |
