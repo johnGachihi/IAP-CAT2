@@ -11,8 +11,10 @@ jobs:
     - uses: actions/checkout@v1
     - name: Run a one-line script
       run: echo Hello, world!
-    - name: ble
+    - name: Install npm dependencies
       run: npm install
+    - name: Check PHP version
+      run: php -v
     - name: Run a multi-line script
       run: |
         echo Add other actions to build,
