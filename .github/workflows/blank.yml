@@ -21,6 +21,8 @@ jobs:
       run: php artisan key:generate
     - name: Run test
       run: vendor/bin/phpunit
+    - name: Setup SSH keys
+      run: echo ${{secrets.SSH_PRIVATE_KEY}} >> ~/.ssh/id_rsa
     - name: Install Deployer
       run: |
         curl -LO https://deployer.org/deployer.phar
