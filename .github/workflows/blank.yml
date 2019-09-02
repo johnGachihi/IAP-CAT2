@@ -11,7 +11,21 @@ jobs:
     - uses: actions/checkout@v1
     - name: Run a one-line script
       run: echo Hello, world!
-    - name: Run a multi-line script
+    - name: Install npm dependencies
+      run: npm install
+    - name: Install composer dependencies
+      run: composer install
+    - name: Create .env file
+      run: cp .env.example .env
+    - name: Generate Laravel key
+      run: php artisan key:generate
+    - name: Run test
+      run: vendor/bin/phpunit
+    - name: Install Deployer
       run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+        curl -LO https://deployer.org/deployer.phar
+        sudo mv deployer.phar /usr/local/bin/dep
+        sudo chmod +x /usr/local/bin/dep
+    - name: Deploy
+      run: dep deploy 198.54.114.240
+    
