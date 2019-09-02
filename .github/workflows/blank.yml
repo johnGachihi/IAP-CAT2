@@ -27,5 +27,5 @@ jobs:
         sudo mv deployer.phar /usr/local/bin/dep
         sudo chmod +x /usr/local/bin/dep
     - name: Deploy
-      run: dep deploy 198.54.114.240
+      run: dep pwd
     
