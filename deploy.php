@@ -22,7 +22,7 @@ set('allow_anonymous_stats', false);
 
 // Hosts
 
-host('project.com')
+host('198.54.114.240')
     ->set('deploy_path', '~/{{application}}');
 
 // Tasks
