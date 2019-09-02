@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9152dc35-8154-476b-8879-afbdf1f66cbc" name="Default Changelist" comment="Updated .github CI yaml file">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="9152dc35-8154-476b-8879-afbdf1f66cbc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/deploy.php" beforeDir="false" afterPath="$PROJECT_DIR$/deploy.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -204,7 +204,7 @@
       <workItem from="1565569608893" duration="1640000" />
       <workItem from="1565970672187" duration="3260000" />
       <workItem from="1566976298628" duration="2586000" />
-      <workItem from="1567418385607" duration="1578000" />
+      <workItem from="1567418385607" duration="2117000" />
     </task>
     <task id="LOCAL-00001" summary="Updated .github CI yaml file">
       <created>1566976476096</created>
@@ -234,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567419263730</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Updated .github CI yaml file">
+      <created>1567429160218</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1567429160218</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

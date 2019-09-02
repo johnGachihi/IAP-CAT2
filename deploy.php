@@ -23,6 +23,7 @@ set('allow_anonymous_stats', false);
 // Hosts
 
 host('198.54.114.240')
+    ->port(21098)
     ->set('deploy_path', '~/{{application}}');
 
 // Tasks
