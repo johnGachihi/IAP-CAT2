@@ -8,8 +8,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
-      - run: ls -a
+      - uses: actions/checkout@v2
+      - run: blkajfkh
       - name: executing remote ssh commands using password
         uses: garygrossgarten/github-action-scp@release
         with:
