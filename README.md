@@ -1,1 +1,1 @@
-https://github.com/johnGachihi/IAP-CAT2/workflows/blank.yml/badge.svg
+![](https://github.com/johnGachihi/IAP-CAT2/workflows/CI/badge.svg)
