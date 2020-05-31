@@ -14,6 +14,7 @@ jobs:
           host: johngachihi.com
           username: johndpwi
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          passphrase: ${{ secrets.PASSPHRASE }}
           port: 21098
           script: ls -a
 #     - uses: actions/checkout@v1
