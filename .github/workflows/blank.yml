@@ -21,18 +21,21 @@ jobs:
           
       - run: cat .env
         
-#       - name: Run phpunit tests
-#         run: vendor/bin/phpunit tests
+      - name: Run phpunit tests
+        run: vendor/bin/phpunit tests
 #       - name: Run jest tests
 #         run: jest resources/js
         
       - name: Build js
         run: npm run prod
+      
+      - name: Compress project
+        run: zip -r project.zip project -x '*node-modules*'
         
       - name: Copy code to server
         uses: garygrossgarten/github-action-scp@release
         with:
-          local: .
+          local: project.zip
           remote: cederlink.johngachihi.com/public_html/IAP_CAT2
           host: johngachihi.com
           username: johndpwi
