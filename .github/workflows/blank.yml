@@ -30,7 +30,7 @@ jobs:
         run: npm run prod
       
       - name: Compress project
-        run: zip -r project.zip . -x '*node-modules*'
+        run: zip -r project.zip . -x '*node_modules*'
       - run: ls *.zip
         
       - name: Copy code to server
