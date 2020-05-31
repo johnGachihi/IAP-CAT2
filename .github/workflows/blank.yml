@@ -14,17 +14,17 @@ jobs:
       - name: Install npm dependencies
         run: npm i
         
-#       - name: Setup Laravel
-#         run: |
-#           echo ${{ secrets.DOT_ENV }} > .env
-#           ls -a
+      - name: Setup Laravel
+        run: |
+          cp .env.example .env
+          php artisan key:generate
           
-#       - run: cat .env
+      - run: cat .env
         
 #       - name: Run phpunit tests
 #         run: vendor/bin/phpunit tests
-      - name: Run jest tests
-        run: jest resources/js
+#       - name: Run jest tests
+#         run: jest resources/js
         
       - name: Build js
         run: npm run prod
