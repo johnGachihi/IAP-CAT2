@@ -43,6 +43,19 @@ jobs:
           port: 21098
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
+          
+      - name: Extract project on server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          port: ${{ secrets.PORT }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          passphrase: ${{ secrets.PASSPHRASE }}
+          script: |
+            cd cederlink.johngachihi.com/public_html/IAP_CAT2
+            unzip project.zip
+        
 #     - uses: actions/checkout@v1
 #     - name: Install npm dependencies
 #       run: npm install
