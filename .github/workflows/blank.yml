@@ -18,7 +18,8 @@ jobs:
         run: |
           echo ${{ secrets.DOT_ENV }} > .env
           ls -a
-          cat .env
+          
+      - run: cat .env
         
       - name: Run phpunit tests
         run: vendor/bin/phpunit tests
