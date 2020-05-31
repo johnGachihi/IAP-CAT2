@@ -22,7 +22,7 @@ jobs:
     - name: Run test
       run: vendor/bin/phpunit
 #     - name: Setup SSH key
-#       run: echo ${{secrets.SSH_PRIVATE_KEY}} >> ~/.ssh/id_rsa
+#       run: echo ${{secrets.SSH_PRIVATE_KEY}} >>  ~/.ssh/id_rsa
     - name: Print id_rsa  
       run: cat ~/.ssh/id_rsa
     - name: Install Deployer
