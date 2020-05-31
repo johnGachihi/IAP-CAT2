@@ -30,7 +30,7 @@ jobs:
         run: npm run prod
       
       - name: Compress project
-        run: zip -r project.zip project -x '*node-modules*'
+        run: zip -r project.zip . -x '*node-modules*'
         
       - name: Copy code to server
         uses: garygrossgarten/github-action-scp@release
