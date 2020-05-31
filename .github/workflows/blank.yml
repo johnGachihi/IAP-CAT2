@@ -55,6 +55,7 @@ jobs:
           script: |
             cd cederlink.johngachihi.com/public_html/IAP_CAT2
             unzip -o project.zip
+            rm project.zip
         
 #     - uses: actions/checkout@v1
 #     - name: Install npm dependencies
