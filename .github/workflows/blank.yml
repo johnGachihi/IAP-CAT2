@@ -54,7 +54,7 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             cd cederlink.johngachihi.com/public_html/IAP_CAT2
-            unzip project.zip
+            unzip -o project.zip
         
 #     - uses: actions/checkout@v1
 #     - name: Install npm dependencies
