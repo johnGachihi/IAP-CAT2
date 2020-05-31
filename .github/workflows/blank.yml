@@ -15,7 +15,7 @@ jobs:
         run: npm i
         
       - name: Run phpunit tests
-      - run: vendor/bin/phpunit tests
+        run: vendor/bin/phpunit tests
       - name: Run jest tests
         run: jest resources/js
         
