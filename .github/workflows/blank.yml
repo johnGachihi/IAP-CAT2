@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: ls -a
+      - run: composer install
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@master
         with:
