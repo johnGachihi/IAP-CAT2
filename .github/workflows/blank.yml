@@ -16,10 +16,11 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           port: 21098
-          script: ls -a
+          script: |
+            cd cederlink.johngachihi.com/public_html
+            echo "A la mode" >> ble.txt
+            
 #     - uses: actions/checkout@v1
-      - name: Run a one-line script
-        run: echo Hello, world!
 #     - name: Install npm dependencies
 #       run: npm install
 #     - name: Install composer dependencies
