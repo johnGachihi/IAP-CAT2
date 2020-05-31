@@ -8,28 +8,37 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: echo Hello, world!
-    - name: Install npm dependencies
-      run: npm install
-    - name: Install composer dependencies
-      run: composer install
-    - name: Create .env file
-      run: cp .env.example .env
-    - name: Generate Laravel key
-      run: php artisan key:generate
-    - name: Run test
-      run: vendor/bin/phpunit
+      - uses: garygrossgarten/github-action-ssh@release
+      - with:
+          command: ls -a
+          host: johngachihi.com
+          port: 21098
+          username: johndpwi
+          privateKey: ${{ secrets.PRIVATE_KEY }}
+          passphrase: ${{ secrets.PASSPHRASE }}
+          tryKeyboard: true
+#     - uses: actions/checkout@v1
+#     - name: Run a one-line script
+#       run: echo Hello, world!
+#     - name: Install npm dependencies
+#       run: npm install
+#     - name: Install composer dependencies
+#       run: composer install
+#     - name: Create .env file
+#       run: cp .env.example .env
+#     - name: Generate Laravel key
+#       run: php artisan key:generate
+#     - name: Run test
+#       run: vendor/bin/phpunit
 #     - name: Setup SSH key
 #       run: echo ${{secrets.SSH_PRIVATE_KEY}} >>  ~/.ssh/id_rsa
-    - name: Print id_rsa  
-      run: cat ~/.ssh/id_rsa
-    - name: Install Deployer
-      run: |
-        curl -LO https://deployer.org/deployer.phar
-        sudo mv deployer.phar /usr/local/bin/dep
-        sudo chmod +x /usr/local/bin/dep
-    - name: Deploy
-      run: dep pwd
+#     - name: Print id_rsa  
+#       run: cat ~/.ssh/id_rsa
+#     - name: Install Deployer
+#       run: |
+#         curl -LO https://deployer.org/deployer.phar
+#         sudo mv deployer.phar /usr/local/bin/dep
+#         sudo chmod +x /usr/local/bin/dep
+#     - name: Deploy
+#       run: dep pwd
     
