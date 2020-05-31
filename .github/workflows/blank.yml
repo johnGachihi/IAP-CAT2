@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - uses: garygrossgarten/github-action-ssh@release
-      - with:
+        with:
           command: ls -a
           host: johngachihi.com
           port: 21098
