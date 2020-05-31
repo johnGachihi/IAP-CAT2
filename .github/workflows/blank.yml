@@ -8,15 +8,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: garygrossgarten/github-action-ssh@release
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@master
         with:
-          command: ls -a
           host: johngachihi.com
-          port: 21098
           username: johndpwi
-          privateKey: ${{ secrets.PRIVATE_KEY }}
-          passphrase: ${{ secrets.PASSPHRASE }}
-          tryKeyboard: true
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 21098
+          script: ls -a
 #     - uses: actions/checkout@v1
       - name: Run a one-line script
         run: echo Hello, world!
