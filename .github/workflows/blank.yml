@@ -11,17 +11,14 @@ jobs:
       - uses: actions/checkout@v1
       - run: ls -a
       - name: executing remote ssh commands using password
-        uses: appleboy/ssh-action@master
+        uses: garygrossgarten/github-action-scp@release
         with:
+          local: test
+          remote: cederlinks.johngachihi.com/public_html
           host: johngachihi.com
           username: johndpwi
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          privateKey: ${{ secrets.SSH_PRIVATE_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
-          port: 21098
-          script: |
-            cd cederlink.johngachihi.com/public_html
-            echo "A la mode" >> ble.txt
-            
 #     - uses: actions/checkout@v1
 #     - name: Install npm dependencies
 #       run: npm install
